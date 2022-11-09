@@ -14,7 +14,7 @@ Next, with python, flask and I developed the service that uses the previously se
 
 The interface is basically a form where the data can be filled for the prediction, and for that I used react.js and axios for the request. 
 
-### Deployent
+### Deployment
 
 For the back-end deployment, I chose GCP. With a docker container, I stored it on Artifact Registry through Cloud Build. Then, I chose to make the service serverless and made it available on Cloud Run. For the API, I used the API Gateway service to connect Cloud Run to the front-end. Finally, to put the website in production, I used the App Engine service. 
 
