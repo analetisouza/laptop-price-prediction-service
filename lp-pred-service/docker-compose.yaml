@@ -1,0 +1,10 @@
+version: "3.10"
+services:
+  app:
+    tty: true
+    build: .
+    command: python3 server.py
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/lp-pred-server

@@ -1,0 +1,4 @@
+**/*.csv
+laptop-price-prediction/*.txt
+/laptop-price-service-frontend/node_modules
+**/__pycache__

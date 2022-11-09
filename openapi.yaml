@@ -1,0 +1,83 @@
+swagger: '2.0'
+info: 
+  title: Laptop Price Prediction Service API
+  version: '1.0'
+schemes:
+- https
+produces:
+- application/json
+x-google-backend:
+  address: https://lp-pred-service-app-uhgy6xurna-ue.a.run.app
+paths:
+  /:
+    post:
+      operationId: makesPricePrediction
+      parameters:
+        - in: body
+          name: brand
+          required: true
+          schema: 
+            type: string
+        - in: body
+          name: screen_size
+          required: true
+          schema: 
+            type: number
+        - in: body
+          name: memory
+          required: true
+          schema: 
+            type: number
+        - in: body
+          name: os
+          required: true
+          schema: 
+            type: string
+        - in: body
+          name: weight
+          required: true
+          schema: 
+            type: number
+        - in: body
+          name: cpu_brand
+          required: true
+          schema: 
+            type: string
+        - in: body
+          name: cpu_model
+          required: true
+          schema: 
+            type: string
+        - in: body
+          name: cpu_clock
+          required: true
+          schema: 
+            type: number
+        - in: body
+          name: gpu_brand
+          required: true
+          schema: 
+            type: string
+        - in: body
+          name: gpu_model
+          required: true
+          schema: 
+            type: string
+        - in: body
+          name: disk_size
+          required: true
+          schema: 
+            type: number
+        - in: body
+          name: disk_type
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              data:
+                type: number
